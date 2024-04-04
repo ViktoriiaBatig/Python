@@ -1,0 +1,38 @@
+#:set color_main '#4424D6'
+#:set color_bg 0,1,0,.5
+#:set color_button "#FC600A"
+<ButtonMenu@Button>
+  background_color: button_color
+  background_normal:''
+  background_down:''
+  on_press:self.background_color =color_buton_p
+  on_release:self.background_color =color_buton
+  size_hint__y:0.25
+  color:color_text
+  font_name:'assets/EBGaramond-VariableFont_wght.ttf'
+  font_size: '25sp'
+  color: color_main
+<MenuScreen>:
+  canvas.before:
+    Color:
+      rgba: rgba("#ffe6f3")
+    Rectangle:
+      pos:self.pos
+      size:self.size
+      source:'assets/pictures/more.jpg'
+  BoxLayout:
+    orientation:'vertical'
+    padding:'20dp'
+    spacing:'20dp'
+    Label:
+      id: title_game
+      text:'Cat clicker'
+      font_name:'assets/EBGaramond-VariableFont_wght.ttf'
+      color: '#695E9C'
+      font_size:'40sp'
+    FloatLayout:
+      orientation:'horizontal'
+<Cat>:
+  allow_stretch:True
+  size_hint: None,None
+  size: "200dp","200dp"
